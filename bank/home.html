@@ -1,0 +1,18 @@
+<center>
+    <h1>Home Page</h1>
+
+</center>
+<input type="text" ng-model="serchInAccordanceWith" placeholder="What are you search"><br>
+<button ng-click="thisDir.toggle= true" ng-hide="thisDir.toggle">Hide</button><br>
+<button ng-click="thisDir.toggle= false" ng-hide="!thisDir.toggle">Show</button><br>
+<ul ng-if="!thisDir.toggle">
+    <li ng-repeat="items in thisDir.list | filter:serchInAccordanceWith" ng-class="items.amount >= 15000 ? 'over-Ten' : 'under-Ten'">
+          <hello-world></hello-world>
+    </li>
+</ul>
+<form ng-submit="thisDir.addAcount()">
+    <input type="text" ng-model="thisDir.name" placeholder="Enter name"><br>
+    <input type="number" ng-model="thisDir.amount" placeholder="Enter amount"><br>
+    <input type="text" ng-model="thisDir.img" placeholder="Enter new image profile"><br>
+    <input type="submit" value="Add acount">
+</form>

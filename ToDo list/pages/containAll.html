@@ -1,0 +1,2 @@
+<input type="checkbox" ng-model="task.status"> &nbsp;&nbsp;
+<span class="text-primary" contenteditable="false" ng-dblclick="changeEditor()" ng-model="task.name" ng-keydown="exitFromedit(task.name)">  {{task.name}}  {{task.contents}} </span> <span ng-if="task.status">Complited</span>
